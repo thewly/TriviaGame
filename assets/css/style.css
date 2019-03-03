@@ -1,0 +1,31 @@
+.dat-background-tho {
+    background-image: url("../images/gators.png");
+    background-repeat: repeat;
+    background-color: blueviolet;
+   
+}
+.giveMeMoreSpace {
+    margin-top: 5rem;
+}
+.radio-toolbar input[type="radio"] {
+    display:none; 
+}
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding: 10px 20px;
+    font-family:Arial;
+    font-size:16px;
+    border: 2px solid #444;
+    border-radius: 4px;  
+    width: 50%;  
+}
+.radio-toolbar input[type="radio"]:checked + label { 
+    background-color:#bfb;
+    border-color: #4c4;
+    width: 50%;
+}
+.radio-toolbar label:hover {
+    background-color: #dfd;
+  }
+  
