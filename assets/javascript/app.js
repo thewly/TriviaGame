@@ -1,4 +1,28 @@
-function check(){
+var count = 3;
+var interval;
+
+
+$("#count").on("click", function() {
+    document.getElementById('count').style.display = "none";
+    document.getElementById("quiz").style.display = "inline-block";
+    interval = setInterval(function () {
+        count--;
+        document.getElementById('disTimer').innerHTML = count;
+        if (count === 0) {
+            clearInterval(interval);
+            document.getElementById('disTimer').innerHTML = 'Done';    
+            check();
+        }
+        
+    }, 1000);
+});
+
+// This is what's broken with my quiz, if keeps changing back to the quiz
+$("#after-submit").on("click", function(){
+    document.getElementById("quiz").style.display = "none";
+    clearInterval(interval);
+}) 
+function check() {
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
     var question3 = document.quiz.question3.value;
@@ -6,7 +30,6 @@ function check(){
     var question5 = document.quiz.question5.value;
     var question6 = document.quiz.question6.value;
     var correct = 0;
-
     if (question1 === "300") {
         correct++;
     }
@@ -25,7 +48,7 @@ function check(){
     if (question6 === "1") {
         correct++;
     }
-
+    document.getElementById("quiz").style.display = "none";
     document.getElementById("after_submit").style.visibility = "visible";
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
 }
