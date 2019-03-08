@@ -5,62 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Trivia Game</title>
 </head>
 
-<body>
-    <button id="count">Start</button>
-    <div id="disTimer"></div>
-    <form id="quiz" name="quiz">
-        <p>How many times could you fit Dallas County's square mileage into Texas?</p>
-        <input type="radio" id="mc" name="question1" value="3">About 3<br>
-        <input type="radio" id="mc" name="question1" value="30">About 30<br>
-        <input type="radio" id="mc" name="question1" value="300">About 300<br>
-        <input type="radio" id="mc" name="question1" value="3000">About 3,000<br>
-        
-        <p>How many times could you fit the square mileage of Texas onto our moon's surface?</p>
-        <input type="radio" id="mc" name="question2" value="5">About 5<br>
-        <input type="radio" id="mc" name="question2" value="50">About 50<br>
-        <input type="radio" id="mc" name="question2" value="500">About 500<br>
-        <input type="radio" id="mc" name="question2" value="5000">About 5,000<br>
-        
-        <p>How many of our moon would you have to have to equal the mass of earth?</p>
-        <input type="radio" id="mc" name="question3" value="8">About 8<br>
-        <input type="radio" id="mc" name="question3" value="80">About 80<br>
-        <input type="radio" id="mc" name="question3" value="800">About 800<br>
-        <input type="radio" id="mc" name="question3" value="8000">About 8,000<br>
+<body class="dat-background-tho">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <!-- blank space -->
+            </div>
+            <div class="col-md-10">
+                <div class="card giveMeMoreSpace">
+                    <div class="card-body">
+                        <button id="count" class="btn btn-primary">Start</button>
+                        <div id="disTimer"></div>
+                        <form id="quiz" name="quiz">
+                            <p>How many times could you fit Dallas County's square mileage into Texas?</p>
+                            <input type="radio" id="mc" name="question1" value="3">About 3<br>
+                            <input type="radio" id="mc" name="question1" value="30">About 30<br>
+                            <input type="radio" id="mc" name="question1" value="300">About 300<br>
+                            <input type="radio" id="mc" name="question1" value="3000">About 3,000<br>
 
-        <p>How many earths would you have to have to equal the mass of our sun?</p>
-        <input type="radio" id="mc" name="question4" value="3">About 300<br>
-        <input type="radio" id="mc" name="question4" value="30">About 3,000<br>
-        <input type="radio" id="mc" name="question4" value="300">About 30,000<br>
-        <input type="radio" id="mc" name="question4" value="3000">About 300,000<br>
+                            <p>How many times could you fit the square mileage of Texas onto our moon's surface?</p>
+                            <input type="radio" id="mc" name="question2" value="5">About 5<br>
+                            <input type="radio" id="mc" name="question2" value="50">About 50<br>
+                            <input type="radio" id="mc" name="question2" value="500">About 500<br>
+                            <input type="radio" id="mc" name="question2" value="5000">About 5,000<br>
 
-        <p>How many suns would you have to have to equal the mass of the supermassive black hole at the center of the milky way?</p>
-        <input type="radio" id="mc" name="question5" value="45">About 450,000<br>
-        <input type="radio" id="mc" name="question5" value="450">About 4,500,000<br>
-        <input type="radio" id="mc" name="question5" value="4500">About 45,000,000<br>
-        <input type="radio" id="mc" name="question5" value="45000">About 450,000,000<br>
+                            <p>How many of our moon would you have to have to equal the mass of earth?</p>
+                            <input type="radio" id="mc" name="question3" value="8">About 8<br>
+                            <input type="radio" id="mc" name="question3" value="80">About 80<br>
+                            <input type="radio" id="mc" name="question3" value="800">About 800<br>
+                            <input type="radio" id="mc" name="question3" value="8000">About 8,000<br>
 
-        <p>How many of those black holes would you have to have to equal the mass of your mom?</p>
-        <input type="radio" id="mc" name="question6" value="1">About 1<br>
-        <input type="radio" id="mc" name="question6" value="1">About 2<br>
-        <input type="radio" id="mc" name="question6" value="1">About 3<br>
-        <input type="radio" id="mc" name="question6" value="1">About 4<br>
+                            <p>How many earths would you have to have to equal the mass of our sun?</p>
+                            <input type="radio" id="mc" name="question4" value="3">About 300<br>
+                            <input type="radio" id="mc" name="question4" value="30">About 3,000<br>
+                            <input type="radio" id="mc" name="question4" value="300">About 30,000<br>
+                            <input type="radio" id="mc" name="question4" value="3000">About 300,000<br>
 
-        <input id="button" type="button" value="I'm finished" onclick = "check();">
-    </form>
+                            <p>How many suns would you have to have to equal the mass of the supermassive black hole at
+                                the
+                                center of the milky way?</p>
+                            <input type="radio" id="mc" name="question5" value="45">About 450,000<br>
+                            <input type="radio" id="mc" name="question5" value="450">About 4,500,000<br>
+                            <input type="radio" id="mc" name="question5" value="4500">About 45,000,000<br>
+                            <input type="radio" id="mc" name="question5" value="45000">About 450,000,000<br>
 
-    <div id = "after_submit">
-        <p id = "number_correct"></p>
-    </div>
+                            <p>How many of those black holes would you have to have to equal the mass of your mom?</p>
+                            <input type="radio" id="mc" name="question6" value="1">About 1<br>
+                            <input type="radio" id="mc" name="question6" value="1">About 2<br>
+                            <input type="radio" id="mc" name="question6" value="1">About 3<br>
+                            <input type="radio" id="mc" name="question6" value="1">About 4<br>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+                            <input id="button" class="btn btn-primary" type="button" value="I'm finished">
+                        </form>
+
+                        <div id="after_submit">
+                            <p id="number_correct"></p>
+                            <p id="incorrect"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <!-- blank space -->
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>

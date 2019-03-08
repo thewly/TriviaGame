@@ -7,6 +7,13 @@
 #quiz {
     display:none;
 }
+.dat-background-tho {
+    background-image: url("../images/stars.jpg");
+    background-repeat: repeat;
+    background-color: blueviolet;
+   
+}
+
 
 
 

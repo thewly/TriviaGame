@@ -1,6 +1,6 @@
-var count = 3;
+var count = 45;
 var interval;
-
+var incorrect = 0;
 
 $("#count").on("click", function() {
     document.getElementById('count').style.display = "none";
@@ -13,15 +13,9 @@ $("#count").on("click", function() {
             document.getElementById('disTimer').innerHTML = 'Done';    
             check();
         }
-        
     }, 1000);
 });
 
-// This is what's broken with my quiz, if keeps changing back to the quiz
-$("#after-submit").on("click", function(){
-    document.getElementById("quiz").style.display = "none";
-    clearInterval(interval);
-}) 
 function check() {
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
@@ -32,27 +26,51 @@ function check() {
     var correct = 0;
     if (question1 === "300") {
         correct++;
+    } else {
+        incorrect++;
     }
+    
     if (question2 === "50") {
         correct++;
+    } else {
+        incorrect++;
     }
+    
     if (question3 === "80") {
         correct++;
+    } else {
+        incorrect++;
     }
+    
     if (question4 === "3000") {
         correct++;
+    } else {
+        incorrect++;
     }
+    
     if (question5 === "450") {
         correct++;
+    } else {
+        incorrect++;
     }
+    
     if (question6 === "1") {
         correct++;
+    } else {
+        incorrect++;
     }
-    document.getElementById("quiz").style.display = "none";
+    
     document.getElementById("after_submit").style.visibility = "visible";
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+    $("#incorrect").text(`You got ${incorrect} incorrect.`);
 }
 
+$("#button").on("click", function(){
+    check();
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("disTimer").style.display = "none";
+    clearInterval(interval);
+});
 
 
 
